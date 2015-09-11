@@ -563,7 +563,7 @@ unsigned int add_matrix_to_array (Matrix_t** mats, Matrix_t* new_matrix, unsigne
 		return 999;
 	}
 	if(num_mats < 0){
-		ptintf("Invalide number\n");
+		printf("Invalide number\n");
 		return 999;
 	}
 
