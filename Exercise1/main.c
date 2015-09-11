@@ -52,7 +52,7 @@ int main (int argc, char **argv) {
 		return -1;
 	}
 	random_matrix(mats[mat_idx], 10, 15);
-	if(!write_matrix("temp_mat", mats[mat_idx]){
+	if(!write_matrix("temp_mat", mats[mat_idx])){
 		perror("PROGRAM FAILED TO WRITE MATRIX\n");
 		return -1;
 	} // TODO ERROR CHECK
@@ -183,7 +183,7 @@ void run_commands (Commands_t* cmd, Matrix_t** mats, unsigned int num_mats) {
 		int mat1_idx = find_matrix_given_name(mats,num_mats,cmd->cmds[1]);
 		const int shift_value = atoi(cmd->cmds[3]);
 		if (mat1_idx >= 0 ) {
-			if(!bitwise_shift_matrix(mats[mat1_idx],cmd->cmds[2][0], shift_value){
+			if(!bitwise_shift_matrix(mats[mat1_idx],cmd->cmds[2][0], shift_value)){
 				perror("PROGRAM FAILED TO SHIFT MATRIX\n");
 				return;
 			} //TODO ERROR CHECK NEEDED
@@ -241,7 +241,7 @@ void run_commands (Commands_t* cmd, Matrix_t** mats, unsigned int num_mats) {
 		int mat1_idx = find_matrix_given_name(mats,num_mats,cmd->cmds[1]);
 		const unsigned int start_range = atoi(cmd->cmds[2]);
 		const unsigned int end_range = atoi(cmd->cmds[3]);
-		if(!random_matrix(mats[mat1_idx],start_range, end_range){
+		if(!random_matrix(mats[mat1_idx],start_range, end_range)) {
 			perror("PROGRAM FAILED TO RANDOMIZE MATRIX\n");
 			return;
 		} //TODO ERROR CHECK NEEDED
